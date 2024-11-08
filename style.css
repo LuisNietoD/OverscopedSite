@@ -7,6 +7,10 @@ body {
   color: #333;
 }
 
+header {
+  text-align: center;
+}
+
 /* Style pour le menu latéral */
 #sidebar {
   width: 60px;
@@ -19,6 +23,7 @@ body {
   transition: width 0.3s ease;
   color: #fff;
   padding-right: 10px;
+  z-index: 1000;
 }
 
 #sidebar ul {
@@ -124,4 +129,76 @@ h3 {
   color: #444;
   margin-top: 20px;
   margin-bottom: 10px;
+}
+
+/* Media Queries pour l'adaptation mobile */
+@media (max-width: 768px) {
+  /* Réduire la largeur du sidebar */
+  #sidebar {
+    width: 50px;
+  }
+
+  #sidebar:hover {
+    width: 150px;
+  }
+
+  #sidebar:hover + #content {
+    margin-left: 150px;
+  }
+
+  /* Ajustement pour le contenu principal */
+  #content {
+    margin-left: 50px;
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  section h2 {
+    font-size: 1.5em;
+  }
+
+  section p, section ul {
+    font-size: 1em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adapter pour les très petits écrans */
+  #sidebar {
+    width: 50px;
+  }
+
+  #sidebar:hover {
+    width: 130px;
+  }
+
+  #content {
+    margin-left: 50px;
+    padding: 15px;
+  }
+
+  section {
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  section h2 {
+    font-size: 1.3em;
+  }
+
+  section p, section ul {
+    font-size: 0.9em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
 }
