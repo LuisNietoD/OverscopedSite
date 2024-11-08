@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardness - Game Design Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Menu latéral -->
+<nav id="sidebar">
+  <ul>
+    <li><a href="#introduction"><span class="icon">📜</span><span class="text">Introduction</span></a></li>
+    <li><a href="#vision"><span class="icon">👁️</span><span class="text">Vision et Philosophie</span></a></li>
+    <li><a href="#gameplay"><span class="icon">🎮</span><span class="text">Gameplay</span></a></li>
+    <li><a href="#world"><span class="icon">🌌</span><span class="text">Monde et Univers</span></a></li>
+    <li><a href="#crafting"><span class="icon">⚒️</span><span class="text">Système de Crafting</span></a></li>
+    <li><a href="#characters"><span class="icon">👥</span><span class="text">Personnages</span></a></li>
+    <li><a href="#ui-ux"><span class="icon">🖥️</span><span class="text">UI/UX</span></a></li>
+    <li><a href="#visuals"><span class="icon">🎨</span><span class="text">Graphismes</span></a></li>
+    <li><a href="#sound"><span class="icon">🎶</span><span class="text">Son et Musique</span></a></li>
+    <li><a href="#production"><span class="icon">🗓️</span><span class="text">Plan de Production</span></a></li>
+  </ul>
+</nav>
+
+<!-- Contenu principal -->
+<div id="content">
+  <header>
+    <h1>Cardness - Game Design Document</h1>
+    <p>Bienvenue dans le GDD de Cardness. Utilisez le menu pour naviguer facilement entre les sections.</p>
+  </header>
+
+  <section id="introduction">
+    <h2>Introduction</h2>
+    <p><strong>Bienvenue dans le Game Design Document (GDD) de <em>Cardness</em></strong>, un jeu qui fusionne des éléments de <strong>cartes</strong>, de <strong>gestion</strong> et de <strong>stratégie</strong> dans un univers de science-fiction mystique.</p>
+
+    <p>Dans <strong>Cardness</strong>, vous incarnez un esprit spatial dont l'objectif est de <strong>libérer l'univers d'une malédiction</strong> transformant toutes les ressources et entités en cartes statiques. Ces cartes, autrefois vivantes, peuvent être réutilisées pour bâtir une armée, gérer des ressources et assembler de puissants équipements pour un ultime affrontement.</p>
+
+    <h3>Pitch du jeu</h3>
+    <p>Dans un univers où une étrange <strong>malédiction</strong>, nommée la "<em>Cardness</em>", a transformé planètes et ressources en un amas de <strong>cartes sans vie</strong>, vous incarnez un esprit ancien et mystérieux. Votre mission est de combattre cette malédiction en rassemblant une armée, en développant des équipements et en voyageant à travers le <strong>système solaire</strong> pour devenir suffisamment puissant afin d'affronter le <strong>cœur de la malédiction</strong>.</p>
+
+    <h3>Objectifs du GDD</h3>
+    <p>Ce document a pour but de :</p>
+    <ul>
+      <li>Définir une <strong>vision cohérente</strong> et partagée du jeu.</li>
+      <li>Fournir des détails clairs sur les <strong>systèmes de jeu</strong>, les <strong>mécaniques</strong>, et le <strong>contenu</strong>.</li>
+      <li>S'assurer que chaque aspect de <strong>Cardness</strong> contribue à l'expérience de jeu globale.</li>
+    </ul>
+
+    <h3>Inspirations et influences</h3>
+    <p>Cardness tire son inspiration de jeux populaires comme <a href="https://www.minecraft.net/" target="_blank">Minecraft</a> et <a href="https://www.stardewvalley.net/" target="_blank">Stardew Valley</a>, tout en intégrant des mécaniques de <strong>cartes</strong> et de <strong>progression</strong> similaires à celles de <a href="https://store.steampowered.com/app/768200/Stacklands/" target="_blank">Stacklands</a>. Cependant, Cardness introduit un gameplay unique avec une <strong>approche spatiale</strong> et des éléments de <strong>gestion avancée</strong> d'armées et de ressources.</p>
+
+    <p>Découvrez comment <strong>libérer l'univers</strong> de la malédiction de la Cardness dans ce voyage captivant et complexe.</p>
+  </section>
+
+
+  <section id="vision">
+    <h2>Vision et Philosophie</h2>
+
+    <p><strong>Cardness</strong> est conçu pour offrir une expérience de jeu qui plonge le joueur dans un monde <strong>mystérieux et léger</strong>, inspiré par des titres comme <em>Worship</em> et <em>Cult of the Lamb</em>. L’ambiance se veut à la fois amusante et intrigante, invitant le joueur à explorer, expérimenter et découvrir de nouvelles interactions dans un univers où règne une sorte de chaos organisé.</p>
+
+    <h3>Objectifs de l’expérience</h3>
+    <p>Au cœur de <strong>Cardness</strong>, l’expérience du joueur passe par plusieurs étapes essentielles :</p>
+    <ul>
+      <li><strong>Début confus et mystérieux</strong> : Le joueur se retrouve plongé dans un univers foisonnant d'options, où le nombre de choses à faire, de possibilités de craft et d'automatisation peut d'abord donner le vertige. Ce sentiment d’être légèrement perdu invite à l'exploration.</li>
+      <li><strong>Satisfaction et construction</strong> : Progressivement, le joueur commence à prendre plaisir à construire et améliorer son village, à automatiser des tâches et à fabriquer des armes. Cette satisfaction est ancrée dans la liberté qu’offre le jeu.</li>
+      <li><strong>Puissance et liberté</strong> : En avançant dans le jeu, le joueur se sentira de plus en plus puissant, notamment grâce à l’automatisation et à la fabrication d’armes et d’objets. L’objectif principal est que chaque joueur se sente à la fois <strong>libre</strong> et <strong>puissant</strong> dans ses choix et ses actions.</li>
+    </ul>
+
+    <h3>Liberté et créativité</h3>
+    <p>Dans <strong>Cardness</strong>, le joueur est libre de modeler l'univers comme il l'entend. Ce jeu peut être défini comme une <strong>simulation ouverte</strong>, avec ses propres règles, mais sans parcours prédéfini. C'est le joueur qui, par sa créativité et ses choix, donne forme et sens à cet univers. Il est encouragé à expérimenter et à repousser les limites de ce qui est possible dans le jeu.</p>
+
+    <h3>Public cible</h3>
+    <p>Ce jeu s’adresse principalement aux joueurs qui aiment les expériences immersives et les mécaniques complexes, qui sont prêts à consacrer des heures pour créer, optimiser et automatiser. Que ce soit les fans de <em>Minecraft</em>, de <em>Factorio</em> ou de <em>Stacklands</em>, <strong>Cardness</strong> saura captiver ceux qui aiment réfléchir et maîtriser des systèmes profonds. Les joueurs plus casuals y trouveront aussi leur compte grâce à la <strong>simplicité du gameplay</strong>, mais il faudra une patience et un investissement certain pour aller au bout des possibilités offertes par le jeu.</p>
+
+    <h3>Éléments clés du gameplay</h3>
+    <p>Les éléments de gameplay qui font de <strong>Cardness</strong> une expérience unique sont :</p>
+    <ul>
+      <li><strong>Les cartes</strong> : Le point central du jeu, elles doivent être agréables à manipuler, déplacer et utiliser. Elles représentent le lien principal entre le joueur et l’univers.</li>
+      <li><strong>L'interaction avec le monde</strong> : Le joueur, représenté par un simple curseur, agit directement sur l’univers, lui conférant un pouvoir unique.</li>
+      <li><strong>Automatisation et magie programmable</strong> : Inspirée de <em>Noita</em> et des <em>Blueprints Unreal</em>, la magie dans <strong>Cardness</strong> permet une certaine programmabilité. Cela offre une liberté et une profondeur supplémentaires.</li>
+      <li><strong>Fabrication d'équipements</strong> : Dans la lignée de <em>Tinkers' Construct</em>, le joueur peut fabriquer des équipements personnalisés, contribuant à son sentiment de puissance et de progression.</li>
+      <li><strong>Progression</strong> : La progression est conçue pour être rapide au début, puis elle devient de plus en plus complexe, jusqu'à atteindre un end-game où le joueur dispose de capacités et d'objets extrêmement puissants.</li>
+    </ul>
+
+    <h3>Liberté totale pour le joueur</h3>
+    <p>Dans <strong>Cardness</strong>, le joueur est entièrement libre de ses choix dès le départ. Tout est débloqué dès le début, avec des quêtes disponibles pour le guider et lui offrir des <strong>récompenses aléatoires</strong>. Toutefois, il peut ignorer ces quêtes et choisir de se consacrer exclusivement à la construction de son village, à l'expérimentation magique ou à tout autre aspect. <strong>Cardness est avant tout un sandbox</strong> où chaque joueur peut suivre sa propre voie.</p>
+
+    <h3>Inspirations principales</h3>
+    <p>Les inspirations qui ont guidé le développement de <strong>Cardness</strong> sont variées :</p>
+    <ul>
+      <li><strong>Magie programmable</strong> : Inspirée de <em>Noita</em>, la magie est flexible et permet des combinaisons uniques.</li>
+      <li><strong>Fabrication d'outils</strong> : À la manière de <em>Tinkers' Construct</em>, les équipements sont modulaires et créatifs.</li>
+      <li><strong>Automatisation</strong> : Des systèmes d'automatisation inspirés de <em>Factorio</em> et des <em>Blueprints Unreal</em> permettent de rendre les processus efficaces et sophistiqués.</li>
+      <li><strong>Gestion de village</strong> : Dans un style rappelant les RTS comme <em>Dawn of War 2</em> ou <em>StarCraft 2</em>, le joueur peut construire et gérer un village prospère.</li>
+      <li><strong>Ambiance</strong> : L’ambiance visuelle et sonore s’inspire de jeux comme <em>Worship</em>, <em>Cult of the Lamb</em> et <em>Rayman</em>, pour une atmosphère légère, mystérieuse et amusante.</li>
+    </ul>
+  </section>
+
+
+  <!-- Ajoute les autres sections ici -->
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
