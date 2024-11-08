@@ -100,10 +100,38 @@
 </div>
 
 <script>
+  // Fonction pour basculer l'affichage du menu
   function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('active');
+
+    // Ajouter un écouteur pour fermer le menu en cliquant en dehors
+    document.addEventListener('click', closeSidebarOnOutsideClick);
   }
+
+  // Fonction pour fermer le menu quand on clique en dehors
+  function closeSidebarOnOutsideClick(event) {
+    const sidebar = document.getElementById('sidebar');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+
+    // Fermer le menu si le clic est en dehors du sidebar et de l'icône hamburger
+    if (!sidebar.contains(event.target) && event.target !== hamburgerIcon) {
+      sidebar.classList.remove('active');
+      document.removeEventListener('click', closeSidebarOnOutsideClick);
+    }
+  }
+
+  // Fonction pour fermer le menu lorsqu'on clique sur un lien
+  function closeSidebarOnLinkClick() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.remove('active');
+    document.removeEventListener('click', closeSidebarOnOutsideClick);
+  }
+
+  // Ajouter l'événement de clic aux liens du menu
+  document.querySelectorAll('#sidebar a').forEach(link => {
+    link.addEventListener('click', closeSidebarOnLinkClick);
+  });
 </script>
 </body>
 </html>
