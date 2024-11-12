@@ -139,3 +139,44 @@ h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+.gantt-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top: 20px;
+  }
+  .gantt-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1200px;
+  }
+  .gantt-table th, .gantt-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  .gantt-table th {
+    background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  .gantt-table td.active {
+    background-color: #88c6f5;
+    cursor: pointer;
+    position: relative;
+  }
+  .gantt-table td.active:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9em;
+    white-space: normal;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
